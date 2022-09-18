@@ -17,8 +17,8 @@ const kResponse = {
               "location_CODE": "PK",
               "location_DESC": null,
               "location_NAME": "Pakistan",
-              "latitude": 30.375321,
-              "longitude": 69.345116,
+              "latitude": 31.375321,
+              "longitude": 89.345116,
               "altitude": null,
               "isactive": "Y",
               "location_ID": 175

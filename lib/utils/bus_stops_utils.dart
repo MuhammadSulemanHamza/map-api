@@ -4,19 +4,16 @@ import 'package:map_markers/constants.dart';
 List<LatLng> extractLatLngs() {
   List<LatLng> latLngs = [];
 
-  var res = kResponse;
+  dynamic res = kResponse;
   if (res.isNotEmpty) {
     do {
       if (res["latitude"] != null && res["longitude"] != null) {
         latLngs
             .add(LatLng(res["latitude"] as double, res["longitude"] as double));
       }
-      // print(res);
-      // print("\n");
-      res = res["locationparent_ID"] as Map<String, Object?>;
-    } while (res["locationparent_ID"] != null);
+      res = res["locationparent_ID"] as Map<String, Object?>?;
+    } while (res != null);
   }
-
   print(latLngs);
   return latLngs;
 }
